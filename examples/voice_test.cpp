@@ -201,7 +201,7 @@ void timer_func(int signo) {
     //ifstream ifile(filename_adpcm, ios::in | ios::binary | ios::ate);
     ifile.open(filename_adpcm, ios::in | ios::binary | ios::ate);
     if(ifile.is_open())
-        printf("zewen---> [FUNC]%s [LINE]:%d ifile open success\n", __FUNCTION__, __LINE__);
+        printf("%s open success\n", filename_adpcm);
     else
         printf("zewen---> [FUNC]%s [LINE]:%d ifile open failed\n", __FUNCTION__, __LINE__);
     size = ifile.tellg();
@@ -217,7 +217,7 @@ void timer_func(int signo) {
     int ii = 1;
     outfile.open(filename_pcm, ios::out | ios:: binary | ios::trunc);
     if(outfile.is_open())
-        printf("zewen---> [FUNC]%s [LINE]:%d outfile open success\n", __FUNCTION__, __LINE__);
+        printf("%s open success\n", filename_pcm);
     else
         printf("zewen---> [FUNC]%s [LINE]:%d outfile open failed\n", __FUNCTION__, __LINE__);
     int i = 0;
