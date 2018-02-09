@@ -247,11 +247,6 @@ int main(int argc, char **argv) {
         exit(1);
     }
 
-	system("sudo hciconfig hci0 down");
-	sleep(1);
-	system("sudo hciconfig hci0 up");
-	sleep(1);
-	return 0;
     signal(SIGALRM, timer_func);
     memset(&tick, 0, sizeof(tick));
 
@@ -356,6 +351,7 @@ int main(int argc, char **argv) {
     }
     std::cout << "set callback" << std::endl;
     temp_value->enable_value_notifications(data_callback, nullptr);
+    std::cout << "now is ready to receive your voice data:" << std::endl;
 
     std::mutex m;
     std::unique_lock<std::mutex> lock(m);
