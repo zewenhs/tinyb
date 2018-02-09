@@ -3,7 +3,9 @@ Tiny Bluetooth LE Library
 
 **compile command:**  
 ```
-g++ -o ota_test ota_test.cpp --std=c++11 -ltinyb
+g++ -o ota_test ota_test.cpp --std=c++11 -ltinyb  
+  
+g++ -o notifications notifications.cpp --std=c++11 -ltinyb
 ```
 
 [![Build Status](https://travis-ci.org/intel-iot-devkit/tinyb.svg?branch=master)](https://travis-ci.org/intel-iot-devkit/tinyb)
